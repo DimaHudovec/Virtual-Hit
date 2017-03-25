@@ -32,18 +32,5 @@ public class Initializer : MonoBehaviour
 	{
 		leftScore.text = "Score: " + handler.Score;
 		rightScore.text = leftScore.text;
-		if(Input.GetKeyUp(KeyCode.Escape))
-		{  
-			if(!paused)
-			{  
-				Time.timeScale = 0;  
-				paused=true;  
-			}
-			else
-			{  
-				Time.timeScale = 1;  
-				paused=false;  
-			} 
-		} 
 	}
 }

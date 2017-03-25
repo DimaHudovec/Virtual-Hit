@@ -9,7 +9,6 @@ public class Tests {
 	{
 		var scoreHandler = new VirtualButtonEventHandler ();
 		scoreHandler.CalculateScore (true);
-
 		Assert.AreEqual (1, scoreHandler.Score);
 	}
 
@@ -18,7 +17,7 @@ public class Tests {
 	{
 		var scoreHandler = new VirtualButtonEventHandler ();
 		scoreHandler.CalculateScore (false);
-
 		Assert.AreEqual (0, scoreHandler.Score);
 	}
+		
 }

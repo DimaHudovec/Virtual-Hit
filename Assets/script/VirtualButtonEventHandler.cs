@@ -6,10 +6,10 @@ using System;
 public class VirtualButtonEventHandler : MonoBehaviour, IVirtualButtonEventHandler {
 
 	public int Score { get { return score; } }
-
+	public int ModelNum { get { return model_num; } }
     // Private fields to store the models
-    private GameObject model_1;
-    private GameObject model_2;
+	private GameObject model_1;
+	private GameObject model_2;
 	private GameObject model_3;
 	private int model_num;
 	private int score;
