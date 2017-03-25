@@ -38,7 +38,7 @@ public class VirtualButtonEventHandler : MonoBehaviour, IVirtualButtonEventHandl
 			model_3.SetActive (true);
 			break;
 		}
-		timer = 2;
+		timer = 4;
 	}
 
 	public void ResetModel()
@@ -66,7 +66,7 @@ public class VirtualButtonEventHandler : MonoBehaviour, IVirtualButtonEventHandl
 		
     void Start() {
 		score = 0;
-		timer = 2;
+		timer = 4;
         // Search for all Children from this ImageTarget with type VirtualButtonBehaviour
         VirtualButtonBehaviour[] vbs = GetComponentsInChildren<VirtualButtonBehaviour>();
         for (int i = 0; i < vbs.Length; ++i) {
