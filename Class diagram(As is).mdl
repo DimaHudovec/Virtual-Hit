@@ -1,0 +1,701 @@
+
+(object Petal
+    version    	50
+    _written   	"Rose 2006.0.0.060314"
+    charSet    	204)
+
+(object Design "Logical View"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"58C5876F014B"
+    enforceClosureAutoLoad 	FALSE
+    defaults   	(object defaults
+	rightMargin 	0.250000
+	leftMargin 	0.250000
+	topMargin  	0.250000
+	bottomMargin 	0.500000
+	pageOverlap 	0.250000
+	clipIconLabels 	TRUE
+	autoResize 	TRUE
+	snapToGrid 	TRUE
+	gridX      	0
+	gridY      	0
+	defaultFont 	(object Font
+	    size       	10
+	    face       	"Arial"
+	    charSet    	204
+	    bold       	FALSE
+	    italics    	FALSE
+	    underline  	FALSE
+	    strike     	FALSE
+	    color      	0
+	    default_color 	TRUE)
+	showMessageNum 	3
+	showClassOfObject 	TRUE
+	notation   	"Unified")
+    root_usecase_package 	(object Class_Category "Use Case View"
+	quid       	"58C5876F014D"
+	exportControl 	"Public"
+	global     	TRUE
+	logical_models 	(list unit_reference_list)
+	logical_presentations 	(list unit_reference_list
+	    (object UseCaseDiagram "Main"
+		quid       	"58C587710069"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    root_category 	(object Class_Category "Logical View"
+	quid       	"58C5876F014C"
+	exportControl 	"Public"
+	global     	TRUE
+	subsystem  	"Component View"
+	quidu      	"58C5876F014E"
+	logical_models 	(list unit_reference_list
+	    (object Class "MonoBehaviour"
+		quid       	"58C588050027")
+	    (object Class "Exit"
+		quid       	"58C58D59018C"
+		superclasses 	(list inheritance_relationship_list
+		    (object Inheritance_Relationship
+			quid       	"58C58EB20241"
+			supplier   	"Logical View::MonoBehaviour"
+			quidu      	"58C588050027"))
+		operations 	(list Operations
+		    (object Operation "OnMouseDown"
+			quid       	"58C58D770095"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)))
+	    (object Class "PlayMenu"
+		quid       	"58C58D910356"
+		superclasses 	(list inheritance_relationship_list
+		    (object Inheritance_Relationship
+			quid       	"58C58EB70345"
+			supplier   	"Logical View::MonoBehaviour"
+			quidu      	"58C588050027"))
+		operations 	(list Operations
+		    (object Operation "Start"
+			quid       	"58C58D9F003A"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "Update"
+			quid       	"58C58DA302F5"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "OnMouseDown"
+			quid       	"58C58DA903E2"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)))
+	    (object Class "BackButtonDevice"
+		quid       	"58C58DBF02E0"
+		superclasses 	(list inheritance_relationship_list
+		    (object Inheritance_Relationship
+			quid       	"58C58EBB00F0"
+			supplier   	"Logical View::MonoBehaviour"
+			quidu      	"58C588050027"))
+		operations 	(list Operations
+		    (object Operation "Start"
+			quid       	"58C58DD70360"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "Update"
+			quid       	"58C58DDE032C"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)))
+	    (object Class "VirtualButtonEventHandler"
+		quid       	"58C58E1503DB"
+		superclasses 	(list inheritance_relationship_list
+		    (object Inheritance_Relationship
+			quid       	"58C58EBD02DA"
+			supplier   	"Logical View::MonoBehaviour"
+			quidu      	"58C588050027"))
+		operations 	(list Operations
+		    (object Operation "Start"
+			quid       	"58C58E5301A6"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "OnButtonPressed"
+			quid       	"58C58E5E02C6"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0)
+		    (object Operation "OnButtonReleased"
+			quid       	"58C58E630356"
+			concurrency 	"Sequential"
+			opExportControl 	"Public"
+			uid        	0))
+		class_attributes 	(list class_attribute_list
+		    (object ClassAttribute "model_1"
+			quid       	"58C58E20001C")
+		    (object ClassAttribute "model_2"
+			quid       	"58C58E32030D")
+		    (object ClassAttribute "model_3"
+			quid       	"58C58E3A021B"))))
+	logical_presentations 	(list unit_reference_list
+	    (object ClassDiagram "Main"
+		quid       	"58C5877100A2"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object ClassView "Class" "Logical View::MonoBehaviour" @1
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(1329, 102)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@1
+			    location   	(1174, 51)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	310
+			    justify    	0
+			    label      	"MonoBehaviour")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"58C588050027"
+			width      	328
+			height     	126
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::Exit" @2
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(634, 506)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@2
+			    location   	(458, 425)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	352
+			    justify    	0
+			    label      	"Exit")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"58C58D59018C"
+			compartment 	(object Compartment
+			    Parent_View 	@2
+			    location   	(458, 486)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	13434879
+			    anchor     	2
+			    nlines     	2
+			    max_width  	359
+			    justify    	1)
+			width      	370
+			height     	186
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::PlayMenu" @3
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(1115, 578)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@3
+			    location   	(939, 447)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	352
+			    justify    	0
+			    label      	"PlayMenu")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"58C58D910356"
+			compartment 	(object Compartment
+			    Parent_View 	@3
+			    location   	(939, 508)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	13434879
+			    anchor     	2
+			    nlines     	4
+			    max_width  	359
+			    justify    	1)
+			width      	370
+			height     	286
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::BackButtonDevice" @4
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(1577, 565)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@4
+			    location   	(1396, 459)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	362
+			    justify    	0
+			    label      	"BackButtonDevice")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"58C58DBF02E0"
+			compartment 	(object Compartment
+			    Parent_View 	@4
+			    location   	(1396, 520)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	13434879
+			    anchor     	2
+			    nlines     	3
+			    max_width  	212
+			    justify    	1)
+			width      	380
+			height     	236
+			annotation 	8
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Logical View::VirtualButtonEventHandler" @5
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(2099, 668)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@5
+			    location   	(1845, 462)
+			    fill_color 	13434879
+			    nlines     	1
+			    max_width  	508
+			    justify    	0
+			    label      	"VirtualButtonEventHandler")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"58C58E1503DB"
+			compartment 	(object Compartment
+			    Parent_View 	@5
+			    location   	(1845, 523)
+			    font       	(object Font
+				size       	10
+				face       	"Arial"
+				charSet    	204
+				bold       	FALSE
+				italics    	FALSE
+				underline  	FALSE
+				strike     	FALSE
+				color      	0
+				default_color 	TRUE)
+			    icon_style 	"Icon"
+			    fill_color 	13434879
+			    anchor     	2
+			    nlines     	7
+			    max_width  	425
+			    justify    	1)
+			width      	526
+			height     	436
+			annotation 	8
+			autoResize 	TRUE)
+		    (object InheritView "" @6
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"58C58EBB00F0"
+			client     	@4
+			supplier   	@1
+			vertices   	(list Points
+			    (1513, 446)
+			    (1362, 165))
+			line_style 	0)
+		    (object InheritView "" @7
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"58C58EB70345"
+			client     	@3
+			supplier   	@1
+			vertices   	(list Points
+			    (1178, 434)
+			    (1299, 165))
+			line_style 	0)
+		    (object InheritView "" @8
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"58C58EB20241"
+			client     	@2
+			supplier   	@1
+			vertices   	(list Points
+			    (634, 412)
+			    (637, 106)
+			    (1164, 102))
+			line_style 	0)
+		    (object InheritView "" @9
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"58C58EBD02DA"
+			client     	@5
+			supplier   	@1
+			vertices   	(list Points
+			    (2090, 449)
+			    (2080, 94)
+			    (1493, 100))
+			line_style 	0)))
+	    (object ClassDiagram "Class"
+		quid       	"58C587F503D4"
+		title      	"Class"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	1788
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    root_subsystem 	(object SubSystem "Component View"
+	quid       	"58C5876F014E"
+	physical_models 	(list unit_reference_list
+	    (object module "$UNNAMED$0" "NotAModuleType" "NotAModulePart"
+		quid       	"58C58A8E03A1"
+		stereotype 	"Application"
+		visible_modules 	(list dependency_list
+		    (object Module_Visibility_Relationship
+			quid       	"58C58B7F0047"
+			supplier   	"Component View::File"
+			quidu      	"58C58AAE018C"
+			supplier_is_spec 	TRUE))
+		language   	"")
+	    (object module "File" "NotAModuleType" "NotAModulePart"
+		quid       	"58C58AAE018C"
+		stereotype 	""
+		visible_modules 	(list dependency_list
+		    (object Module_Visibility_Relationship
+			quid       	"58C58B8E023E"
+			supplier   	"$UNNAMED$0"
+			quidu      	"58C58A8E03A1"
+			supplier_is_spec 	TRUE))
+		language   	""))
+	physical_presentations 	(list unit_reference_list
+	    (object Module_Diagram "Main"
+		quid       	"58C587710068"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))
+	    (object Module_Diagram "Component"
+		quid       	"58C58A4902C3"
+		title      	"Component"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object ModView "$UNNAMED$0" "NotAModuleType" "NotAModulePart" @10
+			location   	(494, 318)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@10
+			    location   	(412, 343)
+			    fill_color 	13434879
+			    anchor_loc 	3
+			    nlines     	2
+			    max_width  	310
+			    justify    	1
+			    label      	"")
+			stereotype 	(object ItemLabel
+			    Parent_View 	@10
+			    location   	(412, 268)
+			    fill_color 	13434879
+			    anchor     	10
+			    anchor_loc 	3
+			    nlines     	1
+			    max_width  	300
+			    justify    	1
+			    label      	"<<Application>>")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"58C58A8E03A1"
+			width      	558
+			autoResize 	TRUE
+			width      	558
+			height     	162)
+		    (object ModView "Component View::File" "NotAModuleType" "NotAModulePart" @11
+			location   	(1361, 322)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@11
+			    location   	(1269, 297)
+			    fill_color 	13434879
+			    anchor_loc 	3
+			    nlines     	2
+			    max_width  	347
+			    justify    	1
+			    label      	"File")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	13434879
+			quidu      	"58C58AAE018C"
+			width      	626
+			autoResize 	TRUE
+			width      	626
+			height     	162)
+		    (object ModVisView "" @12
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"58C58B7F0047"
+			client     	@10
+			supplier   	@11
+			vertices   	(list Points
+			    (761, 318)
+			    (1058, 318))
+			line_style 	0)
+		    (object ModVisView "" @13
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"58C58B8E023E"
+			client     	@11
+			supplier   	@10
+			vertices   	(list Points
+			    (1058, 318)
+			    (761, 318))
+			line_style 	0))))
+	category   	"Logical View"
+	quidu      	"58C5876F014C")
+    process_structure 	(object Processes
+	quid       	"58C5876F014F"
+	ProcsNDevs 	(list
+	    (object Device "Android"
+		quid       	"58C58C40038B"
+		connections 	(list connection_list
+		    (object Connection_Relationship
+			quid       	"58C58CF602B4"
+			supplier   	"File"
+			quidu      	"58C58CBD035F"
+			supplier_is_device 	TRUE))
+		characteristics 	"")
+	    (object Device "File"
+		quid       	"58C58CBD035F"
+		characteristics 	"")
+	    (object Process_Diagram "Deployment View"
+		quid       	"58C5876F0151"
+		title      	"Deployment View"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object DeviceView "Android" @14
+			location   	(365, 325)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@14
+			    location   	(107, 154)
+			    nlines     	2
+			    max_width  	444
+			    justify    	0
+			    label      	"Android")
+			icon_style 	"Icon"
+			line_color 	3342489
+			quidu      	"58C58C40038B"
+			width      	519
+			height     	412
+			annotation 	0)
+		    (object NoteView @15
+			location   	(337, 440)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@15
+			    location   	(156, 378)
+			    fill_color 	13434879
+			    nlines     	2
+			    max_width  	327
+			    justify    	1
+			    label      	"<<Application>>")
+			line_color 	3342489
+			fill_color 	13434879
+			width      	387
+			height     	137)
+		    (object DeviceView "File" @16
+			location   	(981, 325)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@16
+			    location   	(723, 154)
+			    nlines     	2
+			    max_width  	444
+			    justify    	0
+			    label      	"File")
+			icon_style 	"Icon"
+			line_color 	3342489
+			quidu      	"58C58CBD035F"
+			width      	519
+			height     	412
+			annotation 	0)
+		    (object NoteView @17
+			location   	(944, 437)
+			font       	(object Font
+			    size       	10
+			    face       	"Arial"
+			    charSet    	204
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@17
+			    location   	(762, 375)
+			    fill_color 	13434879
+			    nlines     	2
+			    max_width  	328
+			    justify    	1
+			    label      	"File")
+			line_color 	3342489
+			fill_color 	13434879
+			width      	388
+			height     	137)
+		    (object ConnectionView "" @18
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"58C58CF602B4"
+			client     	@14
+			supplier   	@16
+			vertices   	(list Points
+			    (593, 325)
+			    (722, 325))
+			line_style 	0)))))
+    properties 	(object Properties
+	quid       	"58C5876F0150"))
