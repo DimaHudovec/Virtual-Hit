@@ -13,8 +13,8 @@ public class VirtualButtonEventHandler : MonoBehaviour, IVirtualButtonEventHandl
 	private GameObject model_3;
 	private int model_num;
 	private int score;
-	private float timer;
-	public bool paused; 
+	private float timer; 
+	public Pause p;
 	//private GameObject btn_1;
 	//private GameObject btn_2;
     /// Called when the scene is loaded
@@ -82,7 +82,6 @@ public class VirtualButtonEventHandler : MonoBehaviour, IVirtualButtonEventHandl
 		model_1.SetActive(false);
 		model_2.SetActive(false);
 		model_3.SetActive(false);
-
 		SetNewModel ();
     }
  
@@ -92,53 +91,53 @@ public class VirtualButtonEventHandler : MonoBehaviour, IVirtualButtonEventHandl
     public void OnButtonPressed(VirtualButtonAbstractBehaviour vb) {
 		//Debug.Log(vb.VirtualButtonName);
 		Debug.Log("Button pressed!");
-        
-		switch(vb.VirtualButtonName) {
-		case "button1":
-			if (model_num == 0 && timer > 0)
-				CalculateScore (true);
-			else
-				CalculateScore (false);
-			ResetModel ();
-			SetNewModel ();
-                    break;
-		case "button2":
-			if (model_num == 1 && timer > 0)
-				CalculateScore (true);
-			else
-				CalculateScore (false);
-			ResetModel ();
-			SetNewModel ();
-           break;
-		case "button3":
-			if (model_num == 2 && timer > 0)
-				CalculateScore (true);
-			else
-				CalculateScore (false);
-			ResetModel ();
-			SetNewModel ();
-			break;
-         //   default:
-         //       throw new UnityException("Button not supported: " + vb.VirtualButtonName);
-         //           break;
-        }
-        
-    }
+			switch(vb.VirtualButtonName) {
+			case "button1":
+				if (model_num == 0 && timer > 0)
+					CalculateScore (true);
+				else
+					CalculateScore (false);
+				ResetModel ();
+				SetNewModel ();
+	                    break;
+			case "button2":
+				if (model_num == 1 && timer > 0)
+					CalculateScore (true);
+				else
+					CalculateScore (false);
+				ResetModel ();
+				SetNewModel ();
+	           break;
+			case "button3":
+				if (model_num == 2 && timer > 0)
+					CalculateScore (true);
+				else
+					CalculateScore (false);
+				ResetModel ();
+				SetNewModel ();
+				break;
+	         //   default:
+	         //       throw new UnityException("Button not supported: " + vb.VirtualButtonName);
+	         //           break;
+	        }
+	}
 
     /// Called when the virtual button has just been released:
     public void OnButtonReleased(VirtualButtonAbstractBehaviour vb) { 
 		Debug.Log("Button released!");
-	}
+	}		
 
 	void Update()
 	{
-		if (timer > 0) {
+		if (timer > 0) 
+		{
 			timer -= Time.deltaTime;
-		} else if (timer < 0) {
+		} 
+		else if (timer < 0) 
+		{
 			ResetModel ();
 			SetNewModel ();
 		}
-			
+
 	}
-		
 }
