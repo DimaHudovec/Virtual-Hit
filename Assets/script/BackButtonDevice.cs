@@ -3,6 +3,7 @@ using System.Collections;
 
 public class BackButtonDevice : MonoBehaviour {
 
+    private static string previousScene = "";
 	// Use this for initialization
 	void Start () {
 	
@@ -14,8 +15,19 @@ public class BackButtonDevice : MonoBehaviour {
         {
             if (Input.GetKey(KeyCode.Escape))
             {
-                Application.LoadLevel("Menu");
+                if(previousScene != "" || previousScene != "PauseMenu")
+                {
+                    if (previousScene == "AR4good")
+                        Pause.current.SetPause();
+
+                    Application.LoadLevel(previousScene);
+                }
             }
         }
+    }
+
+    public static void setPreviousScene(string currentScene)
+    {
+        previousScene = currentScene;
     }
 }

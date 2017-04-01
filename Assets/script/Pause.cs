@@ -3,14 +3,19 @@ using System.Collections;
 
 public class Pause : MonoBehaviour {
 	public VirtualButtonEventHandler virt;
+    public static Pause current;
 	public bool CanPause;
 	// Use this for initialization
 	void Start () {
 		CanPause = true;
 	}
 
+    public void Awake()
+    {
+        current = this;
+    }
 
-	void SetPause ()
+    public void SetPause ()
 	{
 		if(CanPause)
 		{
