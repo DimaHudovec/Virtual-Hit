@@ -14,8 +14,6 @@ public class ContinueButton : MonoBehaviour {
 	}
     void OnMouseDown()
     {
-        Pause.current.SetPause();
-        BackButtonDevice.setPreviousScene(Application.loadedLevelName);
-        Application.LoadLevel("PauseMenu");
+        Application.LoadLevel("AR4good");
     }
 }

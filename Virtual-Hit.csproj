@@ -153,11 +153,11 @@
     <Compile Include="Assets\script\ContinueButton.cs" />
     <Compile Include="Assets\script\ExitMenu.cs" />
     <Compile Include="Assets\script\Initializer.cs" />
-    <Compile Include="Assets\script\MenuButtonDevice.cs" />
     <Compile Include="Assets\script\OpenMainMenu.cs" />
     <Compile Include="Assets\script\OptionMenu.cs" />
     <Compile Include="Assets\script\Pause.cs" />
     <Compile Include="Assets\script\PlayMenu.cs" />
+    <Compile Include="Assets\script\ScoreClass.cs" />
     <Compile Include="Assets\script\VirtualButtonEventHandler.cs" />
   </ItemGroup>
   <ItemGroup>

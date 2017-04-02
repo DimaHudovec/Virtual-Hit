@@ -14,7 +14,8 @@ public class PlayMenu : MonoBehaviour {
 
     public void OnMouseDown()
     {
-        Debug.Log("Pushed play game");
+        ScoreClass.Score = 0;
+        Debug.Log("Play game");
         Application.LoadLevel("AR4good");
         //EditorSceneManager.CreateScene("AR4good");
         //SceneManager.CreateScene("AR4good");

@@ -6,7 +6,6 @@ public class OpenMainMenu : MonoBehaviour {
 
     public void OnMouseDown()
     {
-        BackButtonDevice.setPreviousScene(Application.loadedLevelName);
         Application.LoadLevel("Menu");
     }
 }
