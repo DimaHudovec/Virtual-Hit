@@ -5,14 +5,14 @@ using System;
 
 public class VirtualButtonEventHandler : MonoBehaviour, IVirtualButtonEventHandler {
 
-	public int Score { get { return score; } }
+	public static int Score { get { return score; } set { VirtualButtonEventHandler.score = value; } }
 	public int ModelNum { get { return model_num; } }
     // Private fields to store the models
 	private GameObject model_1;
 	private GameObject model_2;
 	private GameObject model_3;
 	private int model_num;
-	private int score;
+	private static int score;
 	private float timer; 
 	public Pause p;
 	//private GameObject btn_1;
@@ -65,7 +65,7 @@ public class VirtualButtonEventHandler : MonoBehaviour, IVirtualButtonEventHandl
 	}
 		
     void Start() {
-		score = 0;
+		score = ScoreClass.Score;
 		timer = 4;
         // Search for all Children from this ImageTarget with type VirtualButtonBehaviour
         VirtualButtonBehaviour[] vbs = GetComponentsInChildren<VirtualButtonBehaviour>();

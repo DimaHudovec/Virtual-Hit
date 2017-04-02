@@ -30,7 +30,7 @@ public class Initializer : MonoBehaviour
 
 	private void Update()
 	{
-		leftScore.text = "Score: " + handler.Score;
+		leftScore.text = "Score: " + VirtualButtonEventHandler.Score;
 		rightScore.text = leftScore.text;
 	}
 }
