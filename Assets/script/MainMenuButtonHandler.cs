@@ -8,6 +8,8 @@ public class MainMenuButtonHandler : MonoBehaviour {
     public Button optionsButton;
     public Button exitButton;
 
+    public Animator controller;
+
     void Start()
     {
         Button buttonPlay = playButton.GetComponent<Button>();
@@ -22,17 +24,19 @@ public class MainMenuButtonHandler : MonoBehaviour {
     {
         Debug.Log("You have clicked the play button!");
         ScoreClass.Score = 0;
-        Application.LoadLevel("AR4good");
+        controller.SetTrigger("IsPlaying");
     }
 
     void TaskOnClickExit()
     {
         Debug.Log("You have clicked the exit button!");
+        controller.SetTrigger("IsExit");
         Application.Quit();
     }
 
     void TaskOnClickOption()
     {
         Debug.Log("You have clicked the option button!");
+        controller.SetTrigger("IsOption");
     }
 }
