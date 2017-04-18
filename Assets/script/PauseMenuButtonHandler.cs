@@ -7,6 +7,7 @@ public class PauseMenuButtonHandler : MonoBehaviour {
     public Button saveButton;
     public Button optionButton;
     public Button menuButton;
+    public Animator controller;
 
     void Start()
     {
@@ -29,22 +30,24 @@ public class PauseMenuButtonHandler : MonoBehaviour {
     void TaskOnClickContinue()
     {
         Debug.Log("You have clicked the pcontinue button!");
-        Application.LoadLevel("AR4good");
+        controller.SetTrigger("IsContinue");
     }
 
     void TaskOnClickSave()
     {
         Debug.Log("You have clicked the save button!");
+        controller.SetTrigger("IsSave");
     }
 
     void TaskOnClickOption()
     {
         Debug.Log("You have clicked the option button!");
+        controller.SetTrigger("IsOption");
     }
 
     void TaskOnClickMenu()
     {
         Debug.Log("You have clicked the menu button!");
-        Application.LoadLevel("Menu");
+        controller.SetTrigger("IsMenu");
     }
 }

@@ -24,14 +24,14 @@ public class MainMenuButtonHandler : MonoBehaviour {
     {
         Debug.Log("You have clicked the play button!");
         ScoreClass.Score = 0;
-        controller.SetTrigger("IsPlaying");
+        controller.SetTrigger("IsPlay");
     }
 
     void TaskOnClickExit()
     {
         Debug.Log("You have clicked the exit button!");
         controller.SetTrigger("IsExit");
-        Application.Quit();
+        //Application.Quit();
     }
 
     void TaskOnClickOption()

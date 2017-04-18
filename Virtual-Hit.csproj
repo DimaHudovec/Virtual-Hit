@@ -114,6 +114,9 @@
     <Compile Include="Assets\GoogleVR\Scripts\UI\IGvrGazeResponder.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\Utilities\GvrFPS.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\Utilities\GvrIntent.cs" />
+    <Compile Include="Assets\HitBlayAnimation.cs" />
+    <Compile Include="Assets\HitExitAnimation.cs" />
+    <Compile Include="Assets\HitOptionAnimation.cs" />
     <Compile Include="Assets\Vuforia\Scripts\BackgroundPlaneBehaviour.cs" />
     <Compile Include="Assets\Vuforia\Scripts\CloudRecoBehaviour.cs" />
     <Compile Include="Assets\Vuforia\Scripts\CylinderTargetBehaviour.cs" />
@@ -149,7 +152,8 @@
     <Compile Include="Assets\Vuforia\Scripts\WireframeBehaviour.cs" />
     <Compile Include="Assets\Vuforia\Scripts\WireframeTrackableEventHandler.cs" />
     <Compile Include="Assets\Vuforia\Scripts\WordBehaviour.cs" />
-    <Compile Include="Assets\script\HammerAnimation.cs" />
+    <Compile Include="Assets\script\HitContinueAnimation.cs" />
+    <Compile Include="Assets\script\HitMenuAnimation.cs" />
     <Compile Include="Assets\script\Initializer.cs" />
     <Compile Include="Assets\script\MainMenuButtonHandler.cs" />
     <Compile Include="Assets\script\Pause.cs" />
