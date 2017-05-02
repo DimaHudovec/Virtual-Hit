@@ -2,9 +2,11 @@
 using System.Collections;
 
 public class Pause : MonoBehaviour {
-	// Use this for initialization
-	void Start () {
-	}
+    public AudioSource audioSource;
+    // Use this for initialization
+    void Start () {
+        audioSource.volume = VolumeSource.Volume;
+    }
     
 	// Update is called once per frame
 	void Update () {

@@ -7,7 +7,7 @@ public class MainMenuButtonHandler : MonoBehaviour {
     public Button playButton;
     public Button optionsButton;
     public Button exitButton;
-
+    public AudioSource audioSource;
     public Animator controller;
 
     void Start()
@@ -18,6 +18,7 @@ public class MainMenuButtonHandler : MonoBehaviour {
         buttonPlay.onClick.AddListener(TaskOnClickPlay);
         buttonOption.onClick.AddListener(TaskOnClickOption);
         buttonExit.onClick.AddListener(TaskOnClickExit);
+        audioSource.volume = VolumeSource.Volume;
     }
 
     void TaskOnClickPlay()
@@ -31,7 +32,6 @@ public class MainMenuButtonHandler : MonoBehaviour {
     {
         Debug.Log("You have clicked the exit button!");
         controller.SetTrigger("IsExit");
-        //Application.Quit();
     }
 
     void TaskOnClickOption()

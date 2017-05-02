@@ -8,6 +8,7 @@ public class PauseMenuButtonHandler : MonoBehaviour {
     public Button optionButton;
     public Button menuButton;
     public Animator controller;
+    public AudioSource audioSource;
 
     void Start()
     {
@@ -19,6 +20,7 @@ public class PauseMenuButtonHandler : MonoBehaviour {
         buttonSave.onClick.AddListener(TaskOnClickSave);
         buttonOption.onClick.AddListener(TaskOnClickOption);
         buttonMenu.onClick.AddListener(TaskOnClickMenu);
+        audioSource.volume = VolumeSource.Volume;
     }
 
     void Update()
