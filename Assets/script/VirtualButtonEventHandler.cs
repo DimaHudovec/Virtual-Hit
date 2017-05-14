@@ -6,6 +6,7 @@ using System;
 public class VirtualButtonEventHandler : MonoBehaviour, IVirtualButtonEventHandler {
 
 	public static int Score { get { return score; } set { VirtualButtonEventHandler.score = value; } }
+	public static int Lifes { get { return lifes; } set { VirtualButtonEventHandler.lifes = value; } }
 	public int ModelNum { get { return model_num; } }
     // Private fields to store the models
 	private GameObject model_1;
@@ -15,6 +16,9 @@ public class VirtualButtonEventHandler : MonoBehaviour, IVirtualButtonEventHandl
 	private static int score;
 	private float timer; 
 	public Pause p;
+	public AudioClip clip;
+	public AudioSource audio;
+	private static int lifes;
 	//private GameObject btn_1;
 	//private GameObject btn_2;
     /// Called when the scene is loaded
@@ -83,6 +87,7 @@ public class VirtualButtonEventHandler : MonoBehaviour, IVirtualButtonEventHandl
 		model_2.SetActive(false);
 		model_3.SetActive(false);
 		SetNewModel ();
+		Lifes = 5;
     }
  
     /// <summary>
@@ -92,27 +97,36 @@ public class VirtualButtonEventHandler : MonoBehaviour, IVirtualButtonEventHandl
 		//Debug.Log(vb.VirtualButtonName);
 		Debug.Log("Button pressed!");
 			switch(vb.VirtualButtonName) {
-			case "button1":
-				if (model_num == 0 && timer > 0)
-					CalculateScore (true);
-				else
-					CalculateScore (false);
+		case "button1":
+			audio.PlayOneShot (clip);
+			if (model_num == 0 && timer > 0)
+				CalculateScore (true);
+			else {
+				CalculateScore (false);
+				Lifes--;
+			}
 				ResetModel ();
 				SetNewModel ();
-	                    break;
-			case "button2":
-				if (model_num == 1 && timer > 0)
-					CalculateScore (true);
-				else
-					CalculateScore (false);
+	            break;
+		case "button2":
+			audio.PlayOneShot (clip);
+			if (model_num == 1 && timer > 0)
+				CalculateScore (true);
+			else {
+				CalculateScore (false);
+				Lifes--;
+			}
 				ResetModel ();
 				SetNewModel ();
 	           break;
-			case "button3":
-				if (model_num == 2 && timer > 0)
-					CalculateScore (true);
-				else
-					CalculateScore (false);
+		case "button3":
+			audio.PlayOneShot (clip);
+			if (model_num == 2 && timer > 0)
+				CalculateScore (true);
+			else {
+				CalculateScore (false);
+				Lifes--;
+			}
 				ResetModel ();
 				SetNewModel ();
 				break;
