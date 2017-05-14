@@ -1,12 +1,11 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\script\Initializer.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Vuforia\Scripts\DefaultTrackableEventHandler.cs">
     <Files>
       <File FileName="Assets\script\Editor\Tests.cs" Line="1" Column="1" />
-      <File FileName="Assets\script\Initializer.cs" Line="39" Column="88" />
-      <File FileName="Assets\script\VirtualButtonEventHandler.cs" Line="9" Column="87" />
-      <File FileName="Assets\script\Pause.cs" Line="1" Column="1" />
-      <File FileName="Assets\script\MainMenuButtonHandler.cs" Line="1" Column="1" />
+      <File FileName="Assets\Vuforia\Editor\Scripts\ExtensionImport.cs" Line="1" Column="1" />
+      <File FileName="Assets\Vuforia\Scripts\DefaultTrackableEventHandler.cs" Line="7" Column="19" />
+      <File FileName="Assets\Vuforia\Scripts\WireframeTrackableEventHandler.cs" Line="14" Column="19" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
