@@ -69,7 +69,9 @@ public class VirtualButtonEventHandler : MonoBehaviour, IVirtualButtonEventHandl
 	}
 		
     void Start() {
+        audio.volume = VolumeSource.Volume;
 		score = ScoreClass.Score;
+        lifes = ScoreClass.Lifes;
 		timer = 4;
         // Search for all Children from this ImageTarget with type VirtualButtonBehaviour
         VirtualButtonBehaviour[] vbs = GetComponentsInChildren<VirtualButtonBehaviour>();

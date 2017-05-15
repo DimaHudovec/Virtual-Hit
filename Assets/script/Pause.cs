@@ -11,8 +11,9 @@ public class Pause : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.Escape) || Input.GetKeyDown(KeyCode.Menu)) {
-            Debug.Log("Score is saved: " + VirtualButtonEventHandler.Score);
+            Debug.Log("Score is saved: " + VirtualButtonEventHandler.Score + VirtualButtonEventHandler.Lifes);
             ScoreClass.Score = VirtualButtonEventHandler.Score;
+            ScoreClass.Lifes = VirtualButtonEventHandler.Lifes;
             Application.LoadLevel("PauseMenu");
         }
 			

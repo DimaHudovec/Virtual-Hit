@@ -1,10 +1,12 @@
-/*==============================================================================
+/*======
+ * ========================================================================
 Copyright (c) 2010-2014 Qualcomm Connected Experiences, Inc.
 All Rights Reserved.
 Confidential and Proprietary - Protected under copyright and other laws.
 ==============================================================================*/
 
 using UnityEngine;
+using System.Collections;
 
 namespace Vuforia
 {
@@ -17,7 +19,8 @@ namespace Vuforia
         #region PRIVATE_MEMBER_VARIABLES
  
         private TrackableBehaviour mTrackableBehaviour;
-    
+        private bool lost;
+        private int count = 0;
         #endregion // PRIVATE_MEMBER_VARIABLES
 
 
@@ -31,6 +34,29 @@ namespace Vuforia
             {
                 mTrackableBehaviour.RegisterTrackableEventHandler(this);
             }
+            StartCoroutine(Example());
+        }
+
+        void Update()
+        {
+            if (lost)
+            {
+                StartCoroutine(Example());
+                count++;
+
+                if (count == 300)
+                {
+                    ScoreClass.Score = VirtualButtonEventHandler.Score;
+                    ScoreClass.Lifes = VirtualButtonEventHandler.Lifes;
+                    Application.LoadLevel("PauseMenu");
+                }
+
+            }
+        }
+
+        IEnumerator Example()
+        {
+            yield return new WaitForSeconds(200000);
         }
 
         #endregion // UNTIY_MONOBEHAVIOUR_METHODS
@@ -84,6 +110,7 @@ namespace Vuforia
             }
 
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
+            lost = false;
         }
 
 
@@ -105,6 +132,7 @@ namespace Vuforia
             }
 
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
+            lost = true;
         }
 
         #endregion // PRIVATE_METHODS

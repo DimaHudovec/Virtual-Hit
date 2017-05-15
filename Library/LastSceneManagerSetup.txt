@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/AR4good.unity
+- path: Assets/Scenes/OpenGame.unity
   isLoaded: 1
   isActive: 1

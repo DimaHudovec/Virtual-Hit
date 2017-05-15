@@ -7,6 +7,7 @@ public class MainMenuButtonHandler : MonoBehaviour {
     public Button playButton;
     public Button optionsButton;
     public Button exitButton;
+    public Button openButton;
     public AudioSource audioSource;
     public Animator controller;
 
@@ -15,9 +16,11 @@ public class MainMenuButtonHandler : MonoBehaviour {
         Button buttonPlay = playButton.GetComponent<Button>();
         Button buttonOption = optionsButton.GetComponent<Button>();
         Button buttonExit = exitButton.GetComponent<Button>();
+        Button buttonOpen = openButton.GetComponent<Button>();
         buttonPlay.onClick.AddListener(TaskOnClickPlay);
         buttonOption.onClick.AddListener(TaskOnClickOption);
         buttonExit.onClick.AddListener(TaskOnClickExit);
+        buttonOpen.onClick.AddListener(TaskOnClickOpen);
         audioSource.volume = VolumeSource.Volume;
     }
 
@@ -28,10 +31,15 @@ public class MainMenuButtonHandler : MonoBehaviour {
         controller.SetTrigger("IsPlay");
     }
 
+    void TaskOnClickOpen()
+    {
+        Debug.Log("You have clicked the open button!");
+        controller.SetTrigger("IsOpen");
+    }
+
     void TaskOnClickExit()
     {
-        Debug.Log("You have clicked the exit button!");
-        controller.SetTrigger("IsExit");
+        
     }
 
     void TaskOnClickOption()
